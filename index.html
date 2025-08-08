@@ -147,6 +147,113 @@
       font-weight: 600;
       margin-bottom: 0;
     }
+    @media print {
+      /* Ocultar elementos innecesarios */
+      header p, /* subtítulo */
+      .video-wrapper, /* videos */
+      footer,
+      a[href]:after { /* quitar URLs que salen como texto */
+        content: none !important;
+      }
+    
+      /* Background y colores */
+      body {
+        background: white !important;
+        color: black !important;
+        line-height: 1.4 !important;
+      }
+    
+      header {
+        background: none !important;
+        color: black !important;
+        padding: 1rem 0 !important;
+        text-align: center !important;
+        border-bottom: 2px solid #000 !important;
+      }
+    
+      header h1 {
+        font-size: 24pt !important;
+        margin-bottom: 0.3rem !important;
+      }
+    
+      .fecha-evento {
+        background: none !important;
+        color: black !important;
+        font-weight: bold !important;
+        font-size: 14pt !important;
+        margin-top: 0.5rem !important;
+      }
+    
+      section {
+        padding: 1rem 0 !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        page-break-inside: avoid !important;
+      }
+    
+      section h2 {
+        font-size: 18pt !important;
+        margin-bottom: 0.5rem !important;
+        border-bottom: 1px solid #000 !important;
+        padding-bottom: 0.3rem !important;
+      }
+    
+      .galeria {
+        display: block !important;
+      }
+    
+      .galeria img {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-bottom: 0.5rem !important;
+        border-radius: 0 !important;
+      }
+    
+      .artistas, .equipo {
+        display: block !important;
+      }
+    
+      .artista, .integrante {
+        box-shadow: none !important;
+        background: none !important;
+        border-radius: 0 !important;
+        margin-bottom: 1rem !important;
+        page-break-inside: avoid !important;
+      }
+    
+      .artista img, .integrante img {
+        max-width: 150px !important;
+        height: auto !important;
+        margin-bottom: 0.3rem !important;
+        float: left !important;
+        margin-right: 1rem !important;
+      }
+    
+      .artista h3, .integrante h3 {
+        font-size: 14pt !important;
+        margin-bottom: 0.3rem !important;
+      }
+    
+      .artista p {
+        clear: both !important;
+      }
+    
+      /* Quitar links en impresión */
+      a {
+        color: black !important;
+        text-decoration: none !important;
+      }
+    
+      a[href]:after {
+        content: none !important;
+      }
+    
+      /* Footer oculto */
+      footer {
+        display: none !important;
+      }
+    }
+
   </style>
 <script src="https://kit.fontawesome.com/8d7f3f093b.js" crossorigin="anonymous"></script>
 </head>
@@ -280,6 +387,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
