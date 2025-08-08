@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMAL - Encuentro de Bellydance Bariloche</title>
+  <title>AMAL 2025 | Encuentro de Bellydance y Cultura Árabe en Bariloche</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -147,115 +147,27 @@
       font-weight: 600;
       margin-bottom: 0;
     }
-    @media print {
-      /* Ocultar elementos innecesarios */
-      header p, /* subtítulo */
-      .video-wrapper, /* videos */
-      footer,
-      a[href]:after { /* quitar URLs que salen como texto */
-        content: none !important;
-      }
-    
-      /* Background y colores */
-      body {
-        background: white !important;
-        color: black !important;
-        line-height: 1.4 !important;
-      }
-    
-      header {
-        background: none !important;
-        color: black !important;
-        padding: 1rem 0 !important;
-        text-align: center !important;
-        border-bottom: 2px solid #000 !important;
-      }
-    
-      header h1 {
-        font-size: 24pt !important;
-        margin-bottom: 0.3rem !important;
-      }
-    
-      .fecha-evento {
-        background: none !important;
-        color: black !important;
-        font-weight: bold !important;
-        font-size: 14pt !important;
-        margin-top: 0.5rem !important;
-      }
-    
-      section {
-        padding: 1rem 0 !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        page-break-inside: avoid !important;
-      }
-    
-      section h2 {
-        font-size: 18pt !important;
-        margin-bottom: 0.5rem !important;
-        border-bottom: 1px solid #000 !important;
-        padding-bottom: 0.3rem !important;
-      }
-    
-      .galeria {
-        display: block !important;
-      }
-    
-      .galeria img {
-        max-width: 100% !important;
-        height: auto !important;
-        margin-bottom: 0.5rem !important;
-        border-radius: 0 !important;
-      }
-    
-      .artistas, .equipo {
-        display: block !important;
-      }
-    
-      .artista, .integrante {
-        box-shadow: none !important;
-        background: none !important;
-        border-radius: 0 !important;
-        margin-bottom: 1rem !important;
-        page-break-inside: avoid !important;
-      }
-    
-      .artista img, .integrante img {
-        max-width: 150px !important;
-        height: auto !important;
-        margin-bottom: 0.3rem !important;
-        float: left !important;
-        margin-right: 1rem !important;
-      }
-    
-      .artista h3, .integrante h3 {
-        font-size: 14pt !important;
-        margin-bottom: 0.3rem !important;
-      }
-    
-      .artista p {
-        clear: both !important;
-      }
-    
-      /* Quitar links en impresión */
-      a {
-        color: black !important;
-        text-decoration: none !important;
-      }
-    
-      a[href]:after {
-        content: none !important;
-      }
-    
-      /* Footer oculto */
-      footer {
-        display: none !important;
-      }
+    .artista, .integrante {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
     }
+
+.artista:hover, .integrante:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+    
+    
 
   </style>
 <script src="https://kit.fontawesome.com/8d7f3f093b.js" crossorigin="anonymous"></script>
+<meta name="description" content="AMAL es el Encuentro de Bellydance en Bariloche que celebra la cultura árabe a través de seminarios, música en vivo, danza y actividades culturales.">
+<meta property="og:title" content="AMAL - Encuentro de Bellydance Bariloche">
+<meta property="og:description" content="Seminarios, música y danza para celebrar la cultura árabe y la diversidad cultural en Bariloche.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amalevento.github.io/amal-dossier/">
+<meta property="og:image" content="img/foto2.jpg">
 </head>
 <body>
   <header>
@@ -268,6 +180,13 @@
     <h2>¿Qué es AMAL?</h2>
     <p>AMAL es un evento dedicado a celebrar y difundir la riqueza de la cultura árabe en la ciudad de Bariloche.</p>
     <p>A través de espectáculos, música en vivo y espacios de formación, buscamos inspirar, capacitar y promover el perfeccionamiento de bailarinas y bailarines de danza árabe, creando un punto de encuentro para artistas, estudiantes y amantes de esta disciplina.</p>
+  </section>
+
+  <section>
+    <h2>¿Por qué AMAL importa?</h2>
+    <p>
+      AMAL es más que un evento artístico: es un puente cultural que fortalece la identidad multicultural de Bariloche, promoviendo la integración y el respeto por la diversidad. A través de la danza y la música, fomentamos el intercambio generacional y comunitario, impulsando el desarrollo educativo y creativo de nuestra región. AMAL contribuye a construir una comunidad más abierta, inclusiva y vibrante.
+    </p>
   </section>
 
   <section>
@@ -387,6 +306,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
