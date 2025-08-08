@@ -18,7 +18,7 @@
       background-color: #f9f9f9;
     }
     header {
-      background: linear-gradient(90deg, #121212, #404040);
+      background: linear-gradient(90deg, #5e1a1a, #a73535);
       color: white;
       padding: 4rem 2rem;
       text-align: center;
@@ -63,6 +63,23 @@
     }
     a:hover {
       text-decoration: underline;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -125,6 +142,19 @@
   </section>
 
   <section>
+    <h2>Videos</h2>
+    <p>Aquí te mostramos un resumen audiovisual de ediciones anteriores y presentaciones artísticas del evento AMAL.</p>
+  
+    <div class="video-wrapper">
+      <iframe src="https://youtu.be/PqU7fMEMnOY?si=RTafVFAmFrj5Y-bs" title="Video 1" allowfullscreen></iframe>
+    </div>
+  
+    <div class="video-wrapper">
+      <iframe src="https://youtu.be/qHrVCxoyi8o?si=5JUJzjDOe4fQNgqM" title="Video 2" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section>
     <h2>Contacto</h2>
     <p>Para más información o propuestas de colaboración, escribinos a:<br>
     <strong>amal.barilocge@gmail.com</strong></p>
@@ -136,6 +166,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
