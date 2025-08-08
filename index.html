@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMAL 2025 | Encuentro de Bellydance y Cultura Árabe en Bariloche</title>
+  <title>AMAL 2025 | Encuentro de Bellydance y Cultura Árabe en Bariloche.</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8d7f3f093b.js" crossorigin="anonymous"></script>
   <meta name="description" content="AMAL es el Encuentro de Bellydance en Bariloche que celebra la cultura árabe a través de seminarios, música en vivo, danza y actividades culturales.">
@@ -14,18 +14,33 @@
   <meta property="og:image" content="img/foto2.jpg">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Montserrat', sans-serif; color: #1e1e1e; line-height: 1.6; background-color: #f9f9f9; }
-
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #1e1e1e;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+    
     header {
       background: linear-gradient(90deg, #5e1a1a, #a73535);
       color: white;
       padding: 4rem 2rem;
       text-align: center;
     }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.2rem; }
-
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    
     section {
       padding: 3rem 2rem;
       max-width: 900px;
@@ -37,7 +52,7 @@
       border-bottom: 2px solid #ccc;
       padding-bottom: 0.5rem;
     }
-
+    
     .fecha-evento {
       margin-top: 1rem;
       background-color: #800020;
@@ -48,48 +63,50 @@
       font-size: 1rem;
       color: #fff5f5;
     }
-
+    
     /* Grid base para tarjetas */
     .grid {
       display: grid;
       gap: 1.5rem;
       margin-top: 2rem;
     }
-
-    /* Equipos organizador 2 columnas */
+    
+    /* Equipo organizador: 2 columnas */
     #equipo-organizador .grid {
       grid-template-columns: repeat(2, 1fr);
     }
-
-    /* Artistas invitados 3 columnas */
+    
+    /* Artistas invitados: 3 columnas */
     #artistas-invitados .grid {
       grid-template-columns: repeat(3, 1fr);
     }
-
-    /* En móviles baja a 1 columna */
+    
+    /* Móviles: 1 columna */
     @media (max-width: 600px) {
       #equipo-organizador .grid,
       #artistas-invitados .grid {
         grid-template-columns: 1fr;
       }
     }
-
+    
     .tarjeta {
       background: white;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      overflow: hidden; /* para PC que no desborde */
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      overflow: hidden; /* PC: evita que algo desborde */
+      transition: box-shadow 0.3s ease;
+      /* No uso transform para no recortar texto */
     }
     .tarjeta:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
+    
     .tarjeta a {
       color: inherit;
       text-decoration: none;
       display: block;
     }
+    
     .tarjeta img {
       width: 100%;
       height: auto;
@@ -97,24 +114,28 @@
       border-radius: 12px 12px 0 0;
       display: block;
     }
+    
     .tarjeta .contenido {
       padding: 1rem;
       text-align: center;
     }
+    
     .tarjeta h3 {
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
-    /* Párrafos sin corte de texto */
+    
+    /* Párrafos sin corte, sin límite, texto fluye siempre */
     .tarjeta p {
-      white-space: normal;   /* saltos de línea */
-      overflow: visible;     /* muestra todo */
-      text-overflow: unset;  /* sin puntos suspensivos */
-      max-height: none;      /* sin límite de altura */
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+      max-height: none;
+      line-height: 1.4;
     }
-
-    /* En móviles dejamos overflow visible para que no corte */
+    
+    /* Móvil: permite overflow para que no corte texto */
     @media (max-width: 600px) {
       .tarjeta {
         overflow: visible !important;
@@ -123,7 +144,7 @@
         display: block !important;
       }
     }
-
+    
     .galeria {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -133,7 +154,7 @@
       width: 100%;
       border-radius: 8px;
     }
-
+    
     .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
@@ -144,11 +165,13 @@
     }
     .video-wrapper iframe {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       border: none;
     }
-
+    
     footer {
       background: #121212;
       color: white;
@@ -156,6 +179,7 @@
       padding: 2rem 1rem;
       margin-top: 4rem;
     }
+    
     .btn-download-pdf {
       background-color: #a73535;
       color: white;
@@ -173,6 +197,8 @@
       background-color: #5e1a1a;
       box-shadow: 0 6px 12px rgba(94, 26, 26, 0.8);
     }
+
+
   </style>
 </head>
 <body>
@@ -314,4 +340,5 @@
   </footer>
 </body>
 </html>
+
 
