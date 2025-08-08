@@ -78,7 +78,7 @@
       background: white;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      /* overflow: hidden;  --> comentar para móviles */
+      overflow: hidden; /* para PC que no desborde */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .tarjeta:hover {
@@ -106,21 +106,21 @@
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
-    /* Móviles */
+    /* Párrafos sin corte de texto */
+    .tarjeta p {
+      white-space: normal;   /* saltos de línea */
+      overflow: visible;     /* muestra todo */
+      text-overflow: unset;  /* sin puntos suspensivos */
+      max-height: none;      /* sin límite de altura */
+    }
+
+    /* En móviles dejamos overflow visible para que no corte */
     @media (max-width: 600px) {
-      /* Para que la tarjeta permita crecer y no corte texto */
       .tarjeta {
-        overflow: visible !important;  /* quita recortes */
+        overflow: visible !important;
       }
-      /* Para mostrar todo el texto en p sin cortar */
-      .tarjeta p {
-        white-space: normal !important;  
-        overflow: visible !important;    
-        text-overflow: unset !important;
-      }
-      /* Opcional: si el enlace <a> corta el tamaño, puedes probar remover display:block en móviles */
       .tarjeta a {
-        display: inline !important;
+        display: block !important;
       }
     }
 
@@ -310,9 +310,7 @@
   </div>
   
   <footer>
-    <p>&copy; 2025 AMAL - Encuentro de Bellydance Bariloche</p>
+    <p>&copy; 2025 AMAlL - Encuentro de Bellydance Bariloche</p>
   </footer>
 </body>
 </html>
-
-
