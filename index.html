@@ -78,7 +78,7 @@
       background: white;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      overflow: hidden;
+      /* overflow: hidden;  --> comentar para móviles */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .tarjeta:hover {
@@ -93,7 +93,7 @@
     .tarjeta img {
       width: 100%;
       height: auto;
-      object-fit: contain; /* evita que se corte la imagen */
+      object-fit: contain;
       border-radius: 12px 12px 0 0;
       display: block;
     }
@@ -106,12 +106,21 @@
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
-    /* Para que el texto dentro de las tarjetas se muestre completo en móviles */
+    /* Móviles */
     @media (max-width: 600px) {
+      /* Para que la tarjeta permita crecer y no corte texto */
+      .tarjeta {
+        overflow: visible !important;  /* quita recortes */
+      }
+      /* Para mostrar todo el texto en p sin cortar */
       .tarjeta p {
-        white-space: normal !important;  /* permite salto de línea */
-        overflow: visible !important;    /* muestra todo el texto */
-        text-overflow: unset !important; /* quita los puntos suspensivos */
+        white-space: normal !important;  
+        overflow: visible !important;    
+        text-overflow: unset !important;
+      }
+      /* Opcional: si el enlace <a> corta el tamaño, puedes probar remover display:block en móviles */
+      .tarjeta a {
+        display: inline !important;
       }
     }
 
@@ -305,4 +314,5 @@
   </footer>
 </body>
 </html>
+
 
